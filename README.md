@@ -14,4 +14,5 @@ http://localhost:8080/users
 
  * pom.xml
  * /src/main/java/com/ilyamur/topaz/basicspringmvcthymeleaf/ThymeleafConfiguration.java
+ * /src/main/java/com/ilyamur/topaz/basicspringmvcthymeleaf/controller/UserController.java
  * /src/main/webapp/WEB-INF/templates/users.html

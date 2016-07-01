@@ -15,14 +15,14 @@ public class UserController {
     @RequestMapping(value = "/users", method = RequestMethod.GET)
     public String index(Model model) {
 
-        // добавляем объект в модель, чтобы сослаться на нем в шаблоне
+        // add object to model, to reference it in template
         model.addAttribute("users", Arrays.asList(
                 new User(1, "Harry", 29),
                 new User(2, "James", 27),
                 new User(3, "Heather", 17),
                 new User(4, "Henry", 32)));
 
-        // имя шаблона, поиск шаблона выполняется по указанным префиксу и суффиксу в ThymeleafConfiguration
+        // template's name, SpringMVC finds it using prefix and suffix defined in ThymeleafConfiguration
         return "users";
     }
 }
