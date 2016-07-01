@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Users</title>
+    <meta charset="utf-8"/>
+</head>
+<body>
+
+<!-- Шаблон можно редактировать "в живую" - изменения будут при обновлении страницы -->
+
+<h2>Users</h2>
+
+<table>
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Age</td>
+    </tr>
+    </thead>
+    <tbody>
+    <!--
+        Thymeleaf Dialect:
+        https://chibisoft.atlassian.net/wiki/display/~nikki/Thymeleaf+Dialect+Cheat+Sheet
+    -->
+    <tr th:each="user : ${users}">
+        <!-- через user.id на самом деле обращение к user.getId() -->
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.age}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
