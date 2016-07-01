@@ -17,8 +17,8 @@ public class ThymeleafConfiguration {
         templateResolver.setPrefix("/WEB-INF/templates/");
         templateResolver.setSuffix(".html");
         templateResolver.setTemplateMode("HTML5");
-        // кэш отключается на production, но сейчас позволяет динамически
-        // редактировать шаблон - и видеть изменения при обновлении страницы
+        // cache should generally be enabled (especially on production)
+        // but we can live-edit pages, if it's disabled
         templateResolver.setCacheable(false);
         return templateResolver;
     }

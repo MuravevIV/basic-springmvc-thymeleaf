@@ -14,8 +14,8 @@
 
     <profiles>
         <!--
-            если этот maven-профиль указан через -P и команде есть фаза install -
-            запускает через плагин веб-сервер Jetty на localhost:8080
+            if this maven-profile goes after -P and we have install phase -
+            Jetty plugin starts Jetty server on localhost:8080
         -->
         <profile>
             <id>runWebserver</id>
@@ -53,8 +53,7 @@
 
         <!-- Servlet API -->
         <!--
-            Обязательно должен быть указан для любого java-web-приложения,
-            т.к. веб - это часть JavaEE, а не JavaSE
+            Should be in dependencies, because part of JavaEE, not JavaSE
         -->
         <dependency>
             <groupId>javax.servlet</groupId>

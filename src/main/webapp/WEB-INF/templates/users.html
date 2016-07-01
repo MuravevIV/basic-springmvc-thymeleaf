@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<!-- Шаблон можно редактировать "в живую" - изменения будут при обновлении страницы -->
+<!-- Try to live-edit this template and reload browser page. It should work immediately. -->
 
 <h2>Users</h2>
 
@@ -25,7 +25,7 @@
         https://chibisoft.atlassian.net/wiki/display/~nikki/Thymeleaf+Dialect+Cheat+Sheet
     -->
     <tr th:each="user : ${users}">
-        <!-- через user.id на самом деле обращение к user.getId() -->
+        <!-- user.id transforms to user.getId() by Thymeleaf -->
         <td th:text="${user.id}"></td>
         <td th:text="${user.name}"></td>
         <td th:text="${user.age}"></td>
