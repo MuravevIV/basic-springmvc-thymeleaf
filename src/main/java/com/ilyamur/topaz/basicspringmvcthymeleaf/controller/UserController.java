@@ -13,7 +13,7 @@ import java.util.Arrays;
 public class UserController {
 
     @RequestMapping(value = "/users", method = RequestMethod.GET)
-    public String index(Model model) {
+    public String users(Model model) {
 
         // add object to model, to reference it in template
         model.addAttribute("users", Arrays.asList(
